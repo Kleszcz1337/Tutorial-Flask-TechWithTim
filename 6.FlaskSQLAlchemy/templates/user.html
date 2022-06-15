@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}User{% endblock%}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <p>Welcome, {{user}}</p>
+    <form action="#" method="POST">         <!--to cos w value bedzie dzialalo na zasadzie ze jak juz jest podany email to wyświetli nam go a nie pole do wpisania emaila-->
+        <input type="email" name="email" placeholder="Enter Email" value="{{email if email}}"/>
+        <input type="submit" value="submit"/>
+    </form>
+{% endblock %}

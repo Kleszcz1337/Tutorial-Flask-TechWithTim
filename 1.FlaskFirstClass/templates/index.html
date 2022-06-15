@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page</title>
+    </head>
+
+    <body>
+        <h1>HOME PAGE!</h1>
+        <p>Hello :)</p>
+
+        <!-- content sluzy nam do wyswietlenia danych z backendu-->
+        <p>{{content}}</p>
+        <p>{{r}}</p>
+
+        {% for x in range(0,10) %}
+            {% if x % 2 == 1 %}
+                <p>number = {{x}} </p>
+            {% endif %}
+        {% endfor %}
+    </body>
+</html>

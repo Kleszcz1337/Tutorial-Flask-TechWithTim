@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+
+        <!-- bootstrap -->
+        <link-rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggoyROixCbMQv 3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRXT2MZw1T" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+</html>
